@@ -1,0 +1,17 @@
+.expense-container {
+  padding-top: 85px;
+}
+
+.btn-expense {
+  color: #fff;
+  background: #18465D;
+  border-color: #18465D;
+  height: 35px;
+  width: 100px;
+  padding: 3px;
+}
+
+modal-container.modal{
+ padding-top: 100px !important;
+}
+

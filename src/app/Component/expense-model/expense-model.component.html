@@ -1,0 +1,60 @@
+<div class="model-dialog ">
+  <div class="modal-content ">
+    <div class="modal-header modal-report-header">
+      <h5>Expense Calculation - {{expenseDetail?.department}} </h5>
+      <button type="button" class="close" data-dismiss="modal" (click)="bsModalRef.hide() ">&times;</button>
+    </div>
+
+    <div class="modal-body">
+        <table class="table table-bordered">
+            <thead>
+              <tr>
+                  <th>#</th>
+                <th>Employee</th>
+                <th>Designation</th>
+                <th>Expense</th>
+              </tr>
+            </thead>
+            <tbody>
+                <ng-container *ngFor="let emp of expenseDetail.Manager">
+                    <tr 
+                    class="accordion-toggle collapsed" id="accordion1" data-toggle="collapse" data-parent="#accordion1" href="#collapseOne">
+                     <td class="expand-button"></td>  
+                     <td>{{emp.name}}</td>
+                     <td>{{emp.designation}}</td>
+                     <td>{{emp.expense | currency : 'USD'}} </td>
+                   </tr>
+               
+                   <tr class="hide-table-padding">
+                     <!-- <td></td> -->
+                     <td colspan="4">
+                     <div id="collapseOne" class="collapse in p-2">
+                         <table class="table table-bordered emploee-table">
+                             <tbody>
+                               <tr *ngFor="let reportee of emp.reportingPerson; let i = index">
+                                 <td>{{i + 1}}</td>
+                                 <td> {{reportee.name}}</td>
+                                 <td>{{reportee.designation}}</td>
+                                 <td>{{reportee.expense | currency :'USD'}}</td>
+                               </tr>
+                               <tr >
+                                   <td colspan="3"><strong> Total  {{emp.name}}</strong>
+                                      </td>
+                                   <td>{{managerSum | currency:'USD'}}</td>
+                               </tr>
+                             </tbody>
+                           </table>
+                     </div>
+                 </td>
+                     </tr>
+                     <tr>
+                         <td colspan="3" style="text-align: center;"><strong> Total {{expenseDetail?.department}}</strong></td>
+                         <td>{{departmentSum | currency : 'USD'}} </td>
+                     </tr>
+                </ng-container>
+           
+            </tbody>
+          </table>
+    </div>
+
+  </div>

@@ -1,0 +1,47 @@
+[   {
+    "Id": 1,
+    "department": "Admin department",
+    "Manager": [{
+      "name" : "Manager A",
+      "expense" : 300,
+      "designation" : "Manager",
+      "reportingPerson" : [
+        {
+          "name" : "Megha Jain",
+          "designation": "Developer",
+          "expense": 1000
+        },
+        {
+          "name" : "Sayali Joshi",
+          "designation": "QA Tester",
+          "expense": 500
+        }
+      ]
+    }
+   ]
+ 
+  },
+  {
+    "Id": 2,
+    "department": "Account department",
+    "Manager": [{
+      "name" : "Manager B",
+      "expense" : 300,
+      "designation" : "Manager",
+      "reportingPerson" : [
+        {
+          "name" : "Neelam Jain",
+          "designation": "Developer",
+          "expense": 1000
+        },
+        {
+          "name" : "Rashmi Gupta",
+          "designation": "QA Tester",
+          "expense": 500
+        }
+      ]
+    }]
+ 
+   
+  
+  }]

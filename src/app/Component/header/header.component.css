@@ -1,0 +1,28 @@
+.navbar {
+    background: #18465D;
+    border-color: #18465D;
+    box-shadow: none;
+    padding: 0 15px !important;
+    height: 50px;
+    margin-bottom: 0;
+    display: flex;
+    flex: 1 1 100%;
+  }
+  .navbar-nav .nav-link.active {
+    color: #1cd2ff;
+    font-size: 20px;
+    position: relative;
+  }
+  
+  navbar-nav .nav-link:hover::after,
+  .navbar-nav .nav-link.active:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    left: 0;
+    right: 0;
+    bottom: -2.7px;
+    background: #19c7ff;
+  }
+  

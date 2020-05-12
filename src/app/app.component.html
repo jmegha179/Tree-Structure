@@ -1,0 +1,18 @@
+<app-header></app-header>
+<div class="container-fluid expense-container">
+  <h4>Monthly Expense Calculation</h4>
+  <ul *ngFor="let emp of Employee">
+    <li>{{emp.department}}
+      <ul>
+        <li *ngFor="let manager of emp.Manager">{{manager.name}}
+          <ul>
+            <li *ngFor="let reportee of manager.reportingPerson">
+              {{reportee.name}} - {{reportee.designation}}
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <button class="btn btn-expense mt-3" (click)="openModalWithClass(emp.Id)">Expense</button>
+    </li>
+  </ul>
+</div>
